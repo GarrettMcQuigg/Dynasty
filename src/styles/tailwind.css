@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-pearl-white: 255 255 255;
+    --color-sleeper-alt: 47 57 74;
+    --color-first-place: 255 215 0;
+    --color-second-place: 192 192 192;
+    --color-third-place: 205 127 50;
+    /* ... */
+  }
+}
