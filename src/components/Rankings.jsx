@@ -23,7 +23,6 @@ function Rankings() {
 
       <div className='border border-border-blue rounded-[16px] bg-widget-bg mb-4 p-6 font-serif text-lg'>
         <h3 className='font-bold text-[color:white]'>Dynasty Power Rankings</h3>
-
         <div className='text-[color:white] pt-2'>
           <ol className='flex-col list-decimal list-inside leading-6 pl-6 text-left text-md cursor-pointer'>
             <li className='text-first-place'>ptmcclure</li>
