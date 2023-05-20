@@ -1,42 +1,52 @@
 import StandingsCard from './StandingsCard';
-import { getLeague, getUsersInLeague, getUsersRosters } from '../sleeper';
+import { getUsersInLeague, getLeague, getUsersRosters } from '../sleeper';
 import { useState, useEffect } from 'react';
-import '../styles/tailwind.css'
+import '../styles/tailwind.css';
 
 const StandingsData = () => {
-  const [divisions, setDivisions] = useState([]);
   const [users, setUsers] = useState([]);
   const [rosters, setRosters] = useState([]);
+  const [leagues, setLeagues] = useState([]);
+  const [leagues2, setLeagues2] = useState([]);
+
+//   let userSet = new Set();
 
   useEffect(() => {
-    const fetchDivisions = async () => {
-      let { data } = await getLeague();
-      setDivisions(data.metadata.division_1);
-    };
-    fetchDivisions();
-  }, []);
+    const fetchData = async () => {
+      let userData = await getUsersInLeague();
+      setUsers(userData.data);
 
-  useEffect(() => {
-    const fetchLeague = async () => {
-      let { data } = await getUsersInLeague();
-      
-      setUsers(data);
-    };
-    fetchLeague();
-  }, []);
-
-  useEffect(() => {
-    const fetchRosters = async () => {
       let { data } = await getUsersRosters();
-      setRosters(data);
-      console.log(data);
+
+      let leagueData = await getLeague();
+      setLeagues(leagueData.data.metadata.division_1);
+
+      let league2Data = await getLeague();
+      setLeagues2(league2Data.data.metadata.division_2);
+
+      let rosterData = await getUsersRosters();
+      setRosters(rosterData.data);
     };
-    fetchRosters();
+    fetchData();
   }, []);
+
+  //   function getUser(rosters, users) {
+  //     let left = 0;
+  //     let right =
+  //     for (let i = 0; i < rosters.length; i++) {
+  //       for (let j = 0; j < users.length; j++) {
+  //         if (rosters[i].owner_id === users[j].user_id) {
+  //           userSet.has()
+  //         }
+  //       }
+  //     }
+  //   }
 
   return (
     <div className='border border-border-blue rounded-[16px] bg-widget-bg'>
-      <h1 className='font-serif font-semibold tracking-wide pt-6 pb-2'><span className='title'>Standings</span></h1>
+      <div className='font-serif font-semibold tracking-wide pt-6 pb-2'>
+        <span className='title'>Standings</span>
+      </div>
       <ol className='pt-2 bg-sleeper-alt rounded-[16px] m-4'>
         {users.map((user, i) => (
           <li key={i}>

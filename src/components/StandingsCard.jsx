@@ -1,40 +1,24 @@
 import '../styles/tailwind.css';
-import { useState, useEffect } from 'react';
-import { getUsersRosters, getUsersInLeague } from '../sleeper';
-import { render } from 'react-dom';
+import { useNavigate } from 'react-router-dom';
 
-const StandingsCard = ({ display_name, avatar }) => {
-  const [rosters, setRosters] = useState([]);
-  const [users, setUsers] = useState([]);
+const StandingsCard = ({ display_name, avatar, division }) => {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchRosters = async () => {
-      let { data } = await getUsersRosters();
-      setRosters(data);
-    };
-    fetchRosters();
-  }, []);
-
-  useEffect(() => {
-    const fetchLeague = async () => {
-      let { data } = await getUsersInLeague();
-      setUsers(data);
-    };
-    fetchLeague();
-  }, []);
+  const handleClick = () => {
+    navigate(`/${display_name}`)
+  }
 
   return (
     <div className='flex justify-between sm:text-xl md:py-2 cursor-pointer'>
-      <div className='p-4 md:pl-8 flex text-center  sm:justify-normal sm:pt-0'>
+      <div className='p-4 md:pl-8 flex text-center  sm:justify-normal sm:pt-0' onClick={handleClick}>
         <img className='rounded-full sleeper-avatar' src={`https://sleepercdn.com/avatars/thumbs/${avatar}`} />
         <span className='pl-1 md:pl-4 pt-1'>{display_name}</span>
       </div>
+      <div>
+        <span>{division}</span>
+      </div>
       <div className='flex pr-1 pt-6 sm:pr-8 sm:pt-1 justify-center sm:justify-end'>
-        {users.user_id === rosters.owner_id && (
-            <div>{rosters.map((roster, i) => (
-                <span key={i}>{roster.settings.wins}-{roster.settings.losses}</span>
-            ))}</div> 
-        )}
+        <span>0-0</span>
       </div>
     </div>
   );
