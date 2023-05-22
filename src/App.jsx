@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import Rosters from './pages/Rosters';
+import Teampage from './pages/Teampage';
 import './styles/tailwind.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' Component={Homepage} />
-          <Route path='/:display_name' Component={Rosters} />
+          <Route path='/:display_name' Component={Teampage} />
         </Routes>
       </Router>
     </div>
