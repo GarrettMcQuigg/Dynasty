@@ -1,14 +1,14 @@
-import RosterHeader from '../components/RosterHeader';
 import { useParams } from 'react-router-dom';
+import TeamHeader from '../components/TeamHeader';
 
 const Rosters = () => {
   let { display_name } = useParams();
 
   return (
-    <>
-      <RosterHeader display_name={display_name} />
-      {/* <Players /> */}
-    </>
+    <div>
+      <TeamHeader display_name={display_name}/>
+      {/* <TeamPlayers /> */}
+    </div>
   );
 };
 

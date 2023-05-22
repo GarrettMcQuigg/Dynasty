@@ -5,22 +5,6 @@ const RosterHeader = ({ display_name, avatar }) => {
   const [users, setUsers] = useState([]);
   const [rosters, setRosters] = useState([]);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const userData = await getUsersInLeague();
-      setUsers(userData.data);
-
-      const rosterData = await getUsersRosters();
-      setUsers(rosterData.data);
-    };
-
-    fetchUsers();
-  }, []);
-
-  let mappedRoster = rosters.map((roster) => {
-    return roster.owner_id;
-  })
-
 
   return (
     <div className='text-[color:white]'>
