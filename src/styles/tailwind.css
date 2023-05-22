@@ -18,6 +18,10 @@
   width: 40px;
 }
 
+.teampage-avatar {
+  border-radius: 50%;
+}
+
 .title {
   border-radius: 8px;
   color: #00ceb8;
