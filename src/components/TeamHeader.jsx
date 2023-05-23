@@ -50,7 +50,7 @@ const TeamHeader = ({ display_name, owner_id }) => {
         if (user.user_id === owner_id) {
           if (user.display_name === display_name) {
             return (
-              <div className='border sm:px-8 pl-6 py-6 w-[70%]' key={i}>
+              <div className='border sm:px-8 pl-6 py-6 md:w-[60%]' key={i}>
                 <div className='md:flex'>
                   <img className='teampage-avatar mt-2' key={i} src={`https://sleepercdn.com/avatars/thumbs/${user.avatar}`} />
                   <div className='flex-col text-center'>
@@ -65,7 +65,7 @@ const TeamHeader = ({ display_name, owner_id }) => {
                       })}
                     </div>
                   </div>
-                  <div className='flex justify-end w-full pt-3 pl-12'>
+                  <div className='flex md:justify-end w-full pt-3 md:pl-12 sm:pr-0 pr-6'>
                     <span>Next Matchup: {display_name}</span>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const TeamHeader = ({ display_name, owner_id }) => {
                     </div>
                     <div className='pb-4 md:py-0'>
                       <div>Divisional Ranking</div>
-                      <div className='ordinal grid justify-items-center'>
+                      <div className='ordinal grid md:justify-items-center'>
                         <HorizontalRuleOutlinedIcon />
                       </div>
                     </div>
