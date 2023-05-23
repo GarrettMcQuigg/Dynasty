@@ -27,18 +27,18 @@ const Teampage = () => {
   });
 
   return (
-    <div>
+    <>
       <div className='flex justify-center text-[color:white] pt-4'>
         {rosters.map((roster, i) => (
-          <TeamHeader display_name={display_name} owner_id={roster.owner_id} key={i} />
+          <TeamHeader display_name={display_name} owner_id={roster.owner_id} user_id={user_id} key={i} />
         ))}
       </div>
-      <div className='flex justify-center text-[color:white]'>
+      {/* <div className='flex justify-center text-[color:white]'>
         {rosters.map((roster, i) => {
           return <TeamPlayers display_name={display_name} owner_id={roster.roster_id} user_id={user_id} key={i} teamPlayers={roster.players} />;
         })}
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 };
 
