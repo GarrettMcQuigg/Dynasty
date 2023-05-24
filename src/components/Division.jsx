@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { getUsersInLeague, getUsersRosters } from '../sleeper';
+import { getUsersRosters } from '../sleeper';
 
-const Division = ({ display_name, user_id }) => {
+const Division = ({ user_id }) => {
   const [rosters, setRosters] = useState([]);
-  const [users, setUsers] = useState([]);
 
   const DivisionNames = [`BD's on Lamron`, `O Block`];
 
@@ -11,9 +10,6 @@ const Division = ({ display_name, user_id }) => {
     const fetchData = async () => {
       let rosterData = await getUsersRosters();
       setRosters(rosterData.data);
-
-      let userData = await getUsersInLeague();
-      setUsers(userData.data);
     };
 
     fetchData();

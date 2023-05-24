@@ -16,7 +16,7 @@ function Rankings() {
               <li className='text-first-place'>ptmcclure</li>
               <li className='text-second-place'>Laberry</li>
               <li className='text-third-place'>GrantGru</li>
-              <li>BabyBall</li>
+              <li>Timmy</li>
             </div>
             <div className='pt-1'>
               <li>GarrettMcQuigg</li>
@@ -36,14 +36,12 @@ function Rankings() {
         </div>
         <div className='text-[color:white] pt-2'>
           <ol className='flex-col list-decimal list-outside leading-8 pl-6 pt-2 text-center'>
-            <li className='text-first-place'>
-              ptmcclure <span></span>
-            </li>
+            <li className='text-first-place'>ptmcclure</li>
             <li className='text-second-place'>ZGianino</li>
             <li className='text-third-place'>bpdow</li>
             <li>GarrettMcQuigg</li>
             <li>Laberry</li>
-            <li>BabyBall</li>
+            <li>Timmy</li>
             <li>KINGNIGEL23</li>
             <li>GrantGru</li>
             <li>JBohne</li>

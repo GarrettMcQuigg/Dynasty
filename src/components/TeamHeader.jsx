@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
-import { getUsersInLeague, getUsersRosters, getUsersMatchups } from '../sleeper';
+import { getUsersInLeague, getUsersRosters } from '../sleeper';
 import RecordCard from '../components/RecordCard';
 import HorizontalRuleOutlinedIcon from '@mui/icons-material/HorizontalRuleOutlined';
 
 const TeamHeader = ({ display_name, owner_id }) => {
   const [rosters, setRosters] = useState([]);
   const [users, setUsers] = useState([]);
-  const [matchups, setMatchups] = useState([]);
 
-  const DivisionNames = [`BD's on Lamron`, `O Block`];
+  const DivisionNames = [`Division 1`, `Division 2`];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,10 +18,6 @@ const TeamHeader = ({ display_name, owner_id }) => {
       let userData = await getUsersInLeague();
       setUsers(userData.data);
       //   console.log(userData.data)
-
-      let matchupData = await getUsersMatchups();
-      setMatchups(matchupData.data);
-      //   console.log(matchupData.data);
     };
 
     fetchData();
