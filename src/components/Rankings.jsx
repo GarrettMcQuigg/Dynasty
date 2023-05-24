@@ -14,7 +14,7 @@ function Rankings() {
           <ol className='flex-col list-decimal list-outside leading-8 pl-6 pt-2 text-center'>
             <div className='border-b-2 border-[color:#00ceb8] pb-1'>
               <li className='text-first-place'>ptmcclure</li>
-              <li className='text-second-place'>CooperKuppKlan</li>
+              <li className='text-second-place'>Laberry</li>
               <li className='text-third-place'>GrantGru</li>
               <li>BabyBall</li>
             </div>
@@ -24,7 +24,7 @@ function Rankings() {
               <li>JordanWGarrett</li>
               <li>KINGNIGEL23</li>
               <li>bpdow</li>
-              <li>Cum Guzzlers</li>
+              <li>JBohne</li>
             </div>
           </ol>
         </div>
@@ -42,11 +42,11 @@ function Rankings() {
             <li className='text-second-place'>ZGianino</li>
             <li className='text-third-place'>bpdow</li>
             <li>GarrettMcQuigg</li>
-            <li>CooperKuppKlan</li>
+            <li>Laberry</li>
             <li>BabyBall</li>
             <li>KINGNIGEL23</li>
             <li>GrantGru</li>
-            <li>Cum Guzzlers</li>
+            <li>JBohne</li>
             <li>JordanWGarrett</li>
           </ol>
         </div>

@@ -26,7 +26,7 @@ const StandingsCard = ({ display_name, avatar, user_id }) => {
 
   return (
     <div
-      className='flex justify-between items-center sm:text-xl py-3 cursor-pointer hover:text-[color:#00ceb8] hover:bg-[color:#25414e]'
+      className='flex justify-between items-center sm:text-xl py-4 cursor-pointer hover:text-[color:#00ceb8] hover:bg-[color:#25414e] hover:rounded-[16px]'
       onClick={handleClick}
     >
       <div className='md:pl-8 flex text-center sm:justify-normal sm:pt-0'>
@@ -51,7 +51,7 @@ const StandingsCard = ({ display_name, avatar, user_id }) => {
             }
           }
         })}
-        <div>
+        <div className='pb-1'>
           {rosters.map((roster, i) => {
             if (user_id === roster.owner_id) {
               return <RecordCard wins={roster.settings.wins} losses={roster.settings.losses} key={i} />;

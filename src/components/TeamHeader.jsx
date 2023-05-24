@@ -29,18 +29,10 @@ const TeamHeader = ({ display_name, owner_id }) => {
   }, []);
 
   const idMap = new Map();
-  const rosterIdMap = new Map();
 
   users.map((user) => {
     if (user.display_name === display_name) {
       idMap.set(display_name, user.user_id);
-      {
-        rosters.map((r) => {
-          if (r.owner_id === user.user_id) {
-            rosterIdMap.set(display_name, r.roster_id);
-          }
-        });
-      }
     }
   });
 
@@ -50,12 +42,12 @@ const TeamHeader = ({ display_name, owner_id }) => {
         if (user.user_id === owner_id) {
           if (user.display_name === display_name) {
             return (
-              <div className='border sm:px-8 pl-6 py-6 md:w-[60%]' key={i}>
-                <div className='md:flex'>
+              <div className='border border-border-blue rounded-[16px] bg-widget-bg sm:px-8 pl-6 py-6 md:w-[60%]' key={i}>
+                <div className='md:flex '>
                   <img className='teampage-avatar mt-2' key={i} src={`https://sleepercdn.com/avatars/thumbs/${user.avatar}`} />
                   <div className='flex-col text-center'>
-                    <div className='text-xl pt-2 md:pl-4'>{user.display_name.toUpperCase()}</div>
-                    <div className='md:pl-4 text-xl pb-4'>
+                    <div className='text-xl pt-2 md:pl-4 pr-6 sm:pr-0'>{user.display_name.toUpperCase()}</div>
+                    <div className='md:pl-4 pr-6 sm:pr-0 text-xl pb-4'>
                       {rosters.map((roster, i) => {
                         if (user.user_id === roster.owner_id) {
                           if (user.display_name === display_name) {
@@ -65,9 +57,9 @@ const TeamHeader = ({ display_name, owner_id }) => {
                       })}
                     </div>
                   </div>
-                  <div className='flex md:justify-end w-full pt-3 md:pl-12 sm:pr-0 pr-6'>
+                  {/* <div className='flex md:justify-end w-full pt-3 md:pl-12 sm:pr-0 pr-6'>
                     <span>Next Matchup: {display_name}</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className='md:flex justify-center w-full font-serif'>
                   <div className='md:flex items-center justify-between w-full text-lg'>
@@ -78,7 +70,7 @@ const TeamHeader = ({ display_name, owner_id }) => {
                         }
                       })}
                     </div>
-                    <div className='pb-4 md:py-0'>
+                    <div className='pb-4 md:py-0 md:px-2'>
                       <span>
                         {rosters.map((ros) => {
                           if (ros.owner_id === idMap.get(display_name)) {
@@ -98,6 +90,12 @@ const TeamHeader = ({ display_name, owner_id }) => {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div className='pr-4'>
+                  <p>
+                    <h1>OFFSEASON ROSTER TAKES</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam distinctio illum, aliquid quas dolor?
+                    Molestiae ullam pariatur perferendis eius laudantium ut, magni facere, unde vitae blanditiis minus iure voluptates!
+                  </p>
                 </div>
               </div>
             );

@@ -17,21 +17,19 @@ const StandingsData = () => {
   }, []);
 
   return (
-    <div className='border border-border-blue rounded-[16px] bg-widget-bg'>
+    <>
       <div className='font-serif font-semibold tracking-wide pt-6 pb-1'>
         <span className='title'>Standings</span>
       </div>
-      <ol className='bg-sleeper-alt rounded-[16px] m-4'>
-        <li>
-          {users.map((user, i) => (
-            <div key={i}>
-              <StandingsCard avatar={user.avatar} display_name={user.display_name} user_id={user.user_id} />
-              <Divider></Divider>
-            </div>
-          ))}
-        </li>
-      </ol>
-    </div>
+      <div className=' m-4'>
+        {users.map((user, i) => (
+          <div key={i} className='border border-border-blue rounded-[16px] bg-widget-bg mb-2'>
+            <StandingsCard avatar={user.avatar} display_name={user.display_name} user_id={user.user_id} />
+            <Divider></Divider>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
