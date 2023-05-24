@@ -14,7 +14,7 @@ const TeamPlayers = ({ user_id }) => {
 
       let playerData = await getPlayers();
       setPlayers(playerData.data);
-    //   localStorage.setItem('allPlayerData', JSON.stringify(playerData.data));
+      //   localStorage.setItem('allPlayerData', JSON.stringify(playerData.data));
     };
 
     fetchData();
