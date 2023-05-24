@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div>
       <Header />
-      <div className='md:flex pb-4'>
+      <div className='md:flex pb-4 '>
         <WeeklyArticle />
         <Rankings />
       </div>

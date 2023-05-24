@@ -1,7 +1,7 @@
-import { useParams } from 'react-router-dom';
-import TeamHeader from '../components/TeamHeader';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { getUsersInLeague, getUsersRosters } from '../sleeper';
+import TeamHeader from '../components/TeamHeader';
 import TeamStarters from '../components/TeamStarters';
 // import TeamBench from '../components/TeamBench';
 

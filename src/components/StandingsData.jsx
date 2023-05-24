@@ -1,8 +1,8 @@
-import StandingsCard from './StandingsCard';
-import { getUsersInLeague } from '../sleeper';
 import { useState, useEffect } from 'react';
-import '../styles/tailwind.css';
+import { getUsersInLeague } from '../sleeper';
+import StandingsCard from './StandingsCard';
 import Divider from '@mui/material/Divider';
+import '../styles/tailwind.css';
 
 const StandingsData = () => {
   const [users, setUsers] = useState([]);
@@ -21,9 +21,9 @@ const StandingsData = () => {
       <div className='font-serif font-semibold tracking-wide pt-6 pb-1'>
         <span className='title'>Standings</span>
       </div>
-      <div className=' m-4'>
+      <div className='m-4'>
         {users.map((user, i) => (
-          <div key={i} className='border border-border-blue rounded-[16px] bg-widget-bg mb-2'>
+          <div key={i} className='border border-border-blue rounded-[16px] bg-widget-bg mb-2 sm:pl-0'>
             <StandingsCard avatar={user.avatar} display_name={user.display_name} user_id={user.user_id} />
             <Divider></Divider>
           </div>

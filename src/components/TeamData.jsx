@@ -1,7 +1,7 @@
-import { getUsersInLeague } from '../sleeper';
 import { useState, useEffect } from 'react';
-import '../styles/tailwind.css';
+import { getUsersInLeague } from '../sleeper';
 import Division from './Division';
+import '../styles/tailwind.css';
 
 const TeamData = () => {
   const [users, setUsers] = useState([]);
