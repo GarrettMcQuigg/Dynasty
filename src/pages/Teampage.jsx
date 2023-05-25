@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { getUsersInLeague, getUsersRosters } from '../sleeper';
 import TeamHeader from '../components/TeamHeader';
 import TeamStarters from '../components/TeamStarters';
-// import TeamBench from '../components/TeamBench';
 
 const Teampage = () => {
   let { display_name } = useParams();
@@ -41,13 +40,6 @@ const Teampage = () => {
           }
         })}
       </div>
-      {/* <div className='flex justify-center text-[color:white] pt-4'>
-        {users.map((user, j) => {
-          if (user.display_name === display_name) {
-            return <TeamBench display_name={display_name} user_id={user.user_id} key={j} />;
-          }
-        })}
-      </div> */}
     </>
   );
 };

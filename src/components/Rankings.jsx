@@ -1,7 +1,4 @@
 import React from 'react';
-// import HorizontalRuleOutlinedIcon from '@mui/icons-material/HorizontalRuleOutlined';
-// import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
-// import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 function Rankings() {
   return (

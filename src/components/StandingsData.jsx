@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { getUsersInLeague } from '../sleeper';
 import StandingsCard from './StandingsCard';
 import Divider from '@mui/material/Divider';
-import '../styles/tailwind.css';
 
 const StandingsData = () => {
   const [users, setUsers] = useState([]);
