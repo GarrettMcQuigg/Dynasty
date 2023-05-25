@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getUsersRosters, getPlayers } from '../sleeper';
 import PlayerAvatar from './PlayerAvatar';
-import '../styles/tailwind.css';
 
 const TeamPlayers = ({ user_id }) => {
   const [rosters, setRosters] = useState([]);
@@ -14,7 +13,6 @@ const TeamPlayers = ({ user_id }) => {
 
       let playerData = await getPlayers();
       setPlayers(playerData.data);
-      //   localStorage.setItem('allPlayerData', JSON.stringify(playerData.data));
     };
 
     fetchData();

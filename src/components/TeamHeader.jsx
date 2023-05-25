@@ -13,11 +13,9 @@ const TeamHeader = ({ display_name, owner_id }) => {
     const fetchData = async () => {
       let rosterData = await getUsersRosters();
       setRosters(rosterData.data);
-      // console.log(rosterData.data);
 
       let userData = await getUsersInLeague();
       setUsers(userData.data);
-      //   console.log(userData.data)
     };
 
     fetchData();
@@ -52,9 +50,6 @@ const TeamHeader = ({ display_name, owner_id }) => {
                       })}
                     </div>
                   </div>
-                  {/* <div className='flex md:justify-end w-full pt-3 md:pl-12 sm:pr-0 pr-6'>
-                    <span>Next Matchup: {display_name}</span>
-                  </div> */}
                 </div>
                 <div className='md:flex justify-center w-full font-serif'>
                   <div className='md:flex items-center justify-between w-full text-lg'>

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUsersRosters } from '../sleeper';
 import RecordCard from './RecordCard';
-import '../styles/tailwind.css';
 
 const StandingsCard = ({ display_name, avatar, user_id }) => {
   const [rosters, setRosters] = useState([]);

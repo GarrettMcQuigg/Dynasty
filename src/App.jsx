@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Teampage from './pages/Teampage';
-import './styles/tailwind.css';
 
 function App() {
   return (
