@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "16.19.1",
+    "npm": "8.19.3"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "vite",
@@ -17,6 +21,7 @@
     "@mui/material": "^5.13.1",
     "@mui/styled-engine-sc": "^5.12.0",
     "axios": "^1.4.0",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2"
