@@ -4,7 +4,7 @@ import { getUsersRosters } from '../sleeper';
 const Division = ({ user_id }) => {
   const [rosters, setRosters] = useState([]);
 
-  const DivisionNames = [`BD's on Lamron`, `O Block`];
+  const DivisionNames = [[`Division 1`, `Division 2`]];
 
   useEffect(() => {
     const fetchData = async () => {
