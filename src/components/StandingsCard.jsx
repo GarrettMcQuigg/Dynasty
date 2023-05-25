@@ -33,7 +33,7 @@ const StandingsCard = ({ display_name, avatar, user_id }) => {
         <img className='rounded-full sleeper-avatar' src={`https://sleepercdn.com/avatars/thumbs/${avatar}`} />
         <span className='pl-1 md:pl-4 pt-2'>{display_name}</span>
       </div>
-      <div className='flex sm:justify-between justify-end w-[55%] px-4 sm:pt-2 pt-6'>
+      <div className='flex sm:justify-between justify-end w-[55%] px-4 sm:pt-2'>
         {rosters.map((roster, i) => {
           if (user_id === roster.owner_id) {
             if (roster.settings.division === 1) {

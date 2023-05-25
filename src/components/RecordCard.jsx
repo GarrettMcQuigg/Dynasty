@@ -1,6 +1,6 @@
 const RecordCard = ({ wins, losses }) => {
   return (
-    <span>
+    <span className=''>
       {wins} - {losses}
     </span>
   );

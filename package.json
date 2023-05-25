@@ -14,6 +14,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -39,5 +40,18 @@
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.8"
-  }
+  },
+  "description": "��#\u0000 \u0000D\u0000y\u0000n\u0000a\u0000s\u0000t\u0000y\u0000\r\u0000 \u0000#\u0000 \u0000D\u0000y\u0000n\u0000a\u0000s\u0000t\u0000y\u0000\r\u0000 \u0000",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarrettMcQuigg/Dynasty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GarrettMcQuigg/Dynasty/issues"
+  },
+  "homepage": "https://github.com/GarrettMcQuigg/Dynasty#readme"
 }
