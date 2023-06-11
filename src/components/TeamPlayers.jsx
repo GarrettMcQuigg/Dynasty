@@ -23,10 +23,10 @@ const TeamPlayers = ({ user_id }) => {
   Object.values(rosters).map((roster) => {
     if (roster.owner_id === user_id) {
       let benchCodes = roster.players;
-      let starters = roster.starters;
+      let starterCodes = roster.starters;
       for (let i = 0; i < benchCodes.length; i++) {
-        for (let j = 0; j < starters.length; j++) {
-          if (!starters.includes(benchCodes[i])) {
+        for (let j = 0; j < starterCodes.length; j++) {
+          if (!starterCodes.includes(benchCodes[i])) {
             bench.add(benchCodes[i]);
           }
         }
