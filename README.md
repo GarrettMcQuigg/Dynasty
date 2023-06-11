@@ -1,6 +1,4 @@
-# My Site: https://portfolio-dlrfantasy.netlify.app/
-
-  ### My application is designed to be a visual representation for my friend group's fantasy football league
+### My application is designed to be a visual representation for my friend group's fantasy football league
 
 ### API = https://docs.sleeper.com/
 
