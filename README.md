@@ -1,4 +1,4 @@
-### My application is designed to be a visual representation for my friend group's fantasy football league
+### Application is designed to be a visual representation for my friend group's fantasy football league
 
 ### API = https://docs.sleeper.com/
 
