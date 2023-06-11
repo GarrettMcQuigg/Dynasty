@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getUsersInLeague, getUsersRosters } from '../sleeper';
 import TeamHeader from '../components/TeamHeader';
-import TeamStarters from '../components/TeamStarters';
+import TeamPlayers from '../components/TeamPlayers';
 
 const Teampage = () => {
   let { display_name } = useParams();
@@ -36,7 +36,7 @@ const Teampage = () => {
       <div className='flex justify-center text-[color:white]'>
         {users.map((user, i) => {
           if (user.display_name === display_name) {
-            return <TeamStarters display_name={display_name} user_id={user.user_id} key={i} />;
+            return <TeamPlayers display_name={display_name} user_id={user.user_id} key={i} />;
           }
         })}
       </div>
